@@ -7,7 +7,13 @@ import '../lib/en_de_cryptor.dart';
 const encr = 'encrypt';
 const decr = 'decrypt';
 const help = 'help';
+const helpMessage = '''
+Usage format:
+  <command> -<action flag> <file path>
 
+  Action flags:
+    -e or --encrypt - encrypt
+    -d or --decrypt - decrypt''';
 void main(List<String> arguments) async {
   final parser = ArgParser()
     ..addFlag(encr, abbr: 'e')
@@ -19,13 +25,7 @@ void main(List<String> arguments) async {
     final paths = argResults.rest;
 
     if (argResults[help]) {
-      stdout.writeln('''
-      Usage format:
-        <command> -<action flag> <file path>
-
-        Action flags:
-          -e or --encrypt - encrypt
-          -d or --decrypt - decrypt''');
+      stdout.writeln(helpMessage);
       return;
     }
 
@@ -64,9 +64,9 @@ void main(List<String> arguments) async {
 
 String? getKey() {
   try {
+    stdin.echoMode = false;
     stdout.writeln("Enter key:");
     final String? key = stdin.readLineSync();
-    stdin.echoMode = false;
     if (!([16, 24, 32].contains(key!.length))) {
       throw ('Wrong key length, only 16, 24, 32 are allowed.');
     }
