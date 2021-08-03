@@ -67,7 +67,7 @@ String? getKey() {
     stdin.echoMode = false;
     stdout.writeln("Enter key:");
     final String? key = stdin.readLineSync();
-    if (!([16, 24, 32].contains(key!.length))) {
+    if (!([16, 24, 32].contains(key?.length ?? 0))) {
       throw ('Wrong key length, only 16, 24, 32 are allowed.');
     }
     return key;
