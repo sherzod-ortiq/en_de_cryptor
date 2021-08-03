@@ -65,10 +65,10 @@
       "name": "en_de_cryptor",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.10"
+      "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-08-02T08:28:33.042440Z",
+  "generated": "2021-08-03T09:10:57.111512Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }
