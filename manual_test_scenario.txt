@@ -1,0 +1,13 @@
+Scenarios for manual test
+
+  Validate flags
+    Help tag present - only help mesage
+    Flags absent - error
+    Presense of 2 registered flags (no help flag) - error
+  Validate file path
+    Absense of path - error
+    Path is folder path - error
+    More than one path - error
+  Validate key
+    Absence of key - error
+    Key length do not match AES requirements, not from (16, 24, 32) - error

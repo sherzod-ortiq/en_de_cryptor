@@ -2,6 +2,6 @@ name: en_de_cryptor
 description: A dart project for encryption and decryption
 version: 0.0.0+0
 environment:
-  sdk: '>=2.10.0 <3.0.0'
+  sdk: '>=2.12.0 <3.0.0'
 dependencies: 
   encrypt: ^5.0.0
